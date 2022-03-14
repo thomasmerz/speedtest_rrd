@@ -42,7 +42,7 @@ I've uploaded some real-world [examples](examples) from my home-network monitore
 ## Alternatives
 If you like docker you could do this also with [Speedtest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker).
 Which gives you this for example:
-
+<img width="1143" alt="image" src="https://user-images.githubusercontent.com/18568381/158085639-e0c26c0b-fc99-4f3e-89b2-faa955fbce7c.png">
 
 Have fun!
 
