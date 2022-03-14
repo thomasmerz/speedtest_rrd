@@ -28,7 +28,7 @@ MYDOWNLOAD=0
 MYSERVER=$(speedtest --list | grep -v 'Retrieving' | awk '{print $1}'|sed -e 's#)##g'|head -1)
 if [[ $MYSERVER =~ $re ]] ;
 then
-  MYRETURN=$(./speedtest-cli.py --server $MYSERVER --share)
+  MYRETURN=$(speedtest --server "$MYSERVER")
   echo "$MYRETURN">tmp
   MYPING=$(grep -i "^Hosted by" tmp|awk '{print $(NF-1)}')
   #       echo "ping=$MYPING"
