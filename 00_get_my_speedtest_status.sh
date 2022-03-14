@@ -24,36 +24,34 @@ MYPING=0
 MYUPLOAD=0
 MYDOWNLOAD=0
 
-# Replace this with our known city
-
-#MYSERVER=$(./speedtest-cli.py --list | grep -v 'Retrieving' | awk '{print $1}'|sed -e 's#)##g'|head -1)
-MYSERVER=$(/usr/bin/speedtest --list | grep -v 'Retrieving' | awk '{print $1}'|sed -e 's#)##g'|head -1)
+# Use this or replace this with your known city
+MYSERVER=$(speedtest --list | grep -v 'Retrieving' | awk '{print $1}'|sed -e 's#)##g'|head -1)
 if [[ $MYSERVER =~ $re ]] ;
 then
-MYRETURN="./speedtest-cli.py --server $MYSERVER --share"
-echo "$MYRETURN">tmp
-MYPING=$(grep -i "^Hosted by" tmp|awk '{print $(NF-1)}')
-#       echo "ping=$MYPING"
-MYUPLOAD=$(grep -i "^Download" tmp|awk '{print $(NF-1)}')
-#       echo "uplink=$MYUPLOAD"
-MYDOWNLOAD=$(grep -i "^Upload" tmp|awk '{print $(NF-1)}')
-#       echo "downlink=$MYDOWNLOAD"
-#MYLINK=$(grep -i "^Share results" tmp|awk '{print $(NF)}')
-#       echo "piclink=$MYLINK"
+  MYRETURN=$(./speedtest-cli.py --server $MYSERVER --share)
+  echo "$MYRETURN">tmp
+  MYPING=$(grep -i "^Hosted by" tmp|awk '{print $(NF-1)}')
+  #       echo "ping=$MYPING"
+  MYUPLOAD=$(grep -i "^Download" tmp|awk '{print $(NF-1)}')
+  #       echo "uplink=$MYUPLOAD"
+  MYDOWNLOAD=$(grep -i "^Upload" tmp|awk '{print $(NF-1)}')
+  #       echo "downlink=$MYDOWNLOAD"
+  #MYLINK=$(grep -i "^Share results" tmp|awk '{print $(NF)}')
+  #       echo "piclink=$MYLINK"
 fi
 ### added by me:
 ###rm -f tmp
 ###
 if [[ $MYPING =~ $re ]] && [[ $MYUPLOAD =~ $re ]] && [[ $MYDOWNLOAD =~ $re ]] ;
 then
-#       echo "Got values:"
-echo "$MYPING"
-echo "$MYUPLOAD"
-echo "$MYDOWNLOAD"
-else
-#       echo "NO values:"
-echo "0"
-echo "0"
-echo "0"
+  #       echo "Got values:"
+  echo "$MYPING"
+  echo "$MYUPLOAD"
+  echo "$MYDOWNLOAD"
+  else
+  #       echo "NO values:"
+  echo "0"
+  echo "0"
+  echo "0"
 fi
 

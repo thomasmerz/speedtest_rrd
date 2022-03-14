@@ -4,8 +4,11 @@ This project implement a nice speedtest-monitoring of your ISP and your home net
 ![image](https://user-images.githubusercontent.com/18568381/158084777-b1d23058-012f-442b-91b6-186eb293fba4.png)
 (Downlink speed Last month - higher is better)  
 
-## There are the following scripts that are doing the following:
+## Requirements
+🚧 You have to install `speedtest` from your linux-distro (or somewhere else from [GitHub](https://github.com/search?q=speedtest)).  
+🚧 You may need to update [speedtest-executable](00_get_my_speedtest_status.sh#L28) in `00_get_my_speedtest_status.sh`.
 
+## There are the following scripts that are doing the following:
 ```
 00_get_my_speedtest_status.sh
 01_update_my_speedtest_rrd.sh
