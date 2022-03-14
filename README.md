@@ -39,5 +39,10 @@ Run this script once to create rrd-database-file.
 ## Examples
 I've uploaded some real-world [examples](examples) from my home-network monitored via Wifi.
 
+## Alternatives
+If you like docker you could do this also with [Speedtest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker).
+Which gives you this for example:
+
+
 Have fun!
 
