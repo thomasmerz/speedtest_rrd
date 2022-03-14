@@ -29,16 +29,18 @@ MYSERVER=$(speedtest --list | grep -v 'Retrieving' | awk '{print $1}'|sed -e 's#
 if [[ $MYSERVER =~ $re ]] ;
 then
   MYRETURN=$(speedtest --server "$MYSERVER")
-  echo "$MYRETURN">tmp
-  MYPING=$(grep -i "^Hosted by" tmp|awk '{print $(NF-1)}')
-  #       echo "ping=$MYPING"
-  MYUPLOAD=$(grep -i "^Download" tmp|awk '{print $(NF-1)}')
-  #       echo "uplink=$MYUPLOAD"
-  MYDOWNLOAD=$(grep -i "^Upload" tmp|awk '{print $(NF-1)}')
-  #       echo "downlink=$MYDOWNLOAD"
-  #MYLINK=$(grep -i "^Share results" tmp|awk '{print $(NF)}')
-  #       echo "piclink=$MYLINK"
+else
+  MYRETURN=$(speedtest)
 fi
+echo "$MYRETURN">tmp
+MYPING=$(grep -i "^Hosted by" tmp|awk '{print $(NF-1)}')
+#       echo "ping=$MYPING"
+MYUPLOAD=$(grep -i "^Download" tmp|awk '{print $(NF-1)}')
+#       echo "uplink=$MYUPLOAD"
+MYDOWNLOAD=$(grep -i "^Upload" tmp|awk '{print $(NF-1)}')
+#       echo "downlink=$MYDOWNLOAD"
+#MYLINK=$(grep -i "^Share results" tmp|awk '{print $(NF)}')
+#       echo "piclink=$MYLINK"
 ### added by me:
 ###rm -f tmp
 ###
@@ -48,7 +50,7 @@ then
   echo "$MYPING"
   echo "$MYUPLOAD"
   echo "$MYDOWNLOAD"
-  else
+else
   #       echo "NO values:"
   echo "0"
   echo "0"
