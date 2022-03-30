@@ -37,7 +37,7 @@ Run this script once to create rrd-database-file.
 ```
 
 ## Examples
-I've uploaded some real-world [examples](examples) from my home-network monitored via Wifi.
+I've uploaded some real-world [examples](https://github.com/thomasmerz/speedtest_rrd/tree/main/examples) from my home-network monitored via Wifi.
 
 ## Alternatives
 If you like docker you could do this also with [Speedtest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker).
