@@ -1,4 +1,4 @@
-# Purpose of this project
+# Speedtest Monitoring
 This project implement a nice speedtest-monitoring of your ISP and your home network in RRD databases and simple HTML pages with PNG graphs. With these information you know when your ISP (or your network/router/wifi/…) has its "highs" or "lows".  
 
 ![image](https://user-images.githubusercontent.com/18568381/158084777-b1d23058-012f-442b-91b6-186eb293fba4.png)
