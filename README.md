@@ -50,11 +50,17 @@ Run this script once to create rrd-database-file.
 I've uploaded some real-world [examples](https://github.com/thomasmerz/speedtest_rrd/tree/main/examples) from my home-network monitored via Wifi.
 
 ## Alternatives
-If you like docker you could do this also with [Speedtest-Tracker](https://github.com/henrywhitaker3/Speedtest-Tracker).
+If you like docker you could do this also with [Speedtest-Tracker from henrywhitaker3](https://github.com/henrywhitaker3/Speedtest-Tracker).
 
 Which gives you this for example:
 
 <img width="1143" alt="image" src="https://user-images.githubusercontent.com/18568381/158085639-e0c26c0b-fc99-4f3e-89b2-faa955fbce7c.png">
+
+Because the project above isn't maintained anymore (since Sep. 2021), you could also do this with [speedtest-tracker from alexjstesen](https://github.com/alexjustesen/speedtest-tracker).
+
+Which gives you this for example:
+
+<img width="1050" alt="grafik" src="https://user-images.githubusercontent.com/18568381/239577156-4f77d173-4e75-44c4-8111-9fa5898bd0f9.png">
 
 Have fun!
 
